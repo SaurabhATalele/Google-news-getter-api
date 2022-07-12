@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'o5aix4$sg#ld$wfh(54hbroe-^outt+b426lvovoa@ame&fwz1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','0.0.0.0']
 
 
 # Application definition
@@ -133,3 +133,11 @@ TEMPLATES = [
     },
 ]
 STATIC_URL = '/static/'
+
+
+# portfolio/settings.py
+
+# ...
+
+import django_heroku
+django_heroku.settings(locals())
